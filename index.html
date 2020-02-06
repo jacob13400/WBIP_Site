@@ -7,6 +7,13 @@
   <meta content="" name="keywords">
   <meta content="" name="description">
 
+  <!-- Leaflet -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+  
+
+
+
   <!-- Favicons -->
   <link href="img/favicon.png" rel="icon">
   <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -92,8 +99,11 @@
     Intro Section
   ============================-->
   <section id="intro" class="clearfix">
+
     <div class="container d-flex h-100">
+
       <div class="row justify-content-center align-self-center">
+    
         <div class="col-md-6 intro-info order-md-first order-last">
           <h2>Our Ears<br>Your VOICE <br><span>Be heard!</span></h2>
           <div>
@@ -105,15 +115,14 @@
           <img src="img/intro-img.svg" alt="" class="img-fluid">
         </div>
       </div>
-
     </div>
   </section><!-- #intro -->
 
   <main id="main">
-
+    
     <!--==========================
       About Us Section
-    ============================-->
+      ============================-->
     <section id="about">
 
       <div class="container">
@@ -140,6 +149,22 @@
           </div>
         </div>
       </div>
+      
+      <div id="map"></div>
+      <script>
+        var map = L.map('map', {
+          center: [10.5, 76.27],
+          zoom: 8,
+          zoomSnap: 0,
+          boxZoom: false,
+          doubleClickZoom: false,
+          scrollWheelZoom: false,
+          zoomControl: false,
+        });
+
+        L.tileLayer('https://api.maptiler.com/maps/basic/256/{z}/{x}/{y}.png?key=qVTXrWh3QrPPh9FwXYvS', {
+        }).addTo(map)
+      </script>
 
     </section><!-- #about -->
 
