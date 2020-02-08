@@ -496,6 +496,12 @@ h6 {
   background: #f5f8fd;
 }
 
+
+/* Typeform */
+#form {
+  position: relative; left:0; right:0; bottom:0; top:0; border:0;
+}
+
 /* About Us Section
 --------------------------------*/
 
